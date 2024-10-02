@@ -1,0 +1,178 @@
+@import "base";
+
+body {
+    .author-comment {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        padding: 22px 24px 16px 24px;
+        border-radius: 20px;
+        border: 1px solid #e65565;
+        @include breakpoint(992px) {
+            padding: 22px 24px 23px 24px;
+        }
+        @include breakpoint(768px) {
+            flex-wrap: wrap;
+        }
+        @include breakpoint(572px) {
+            padding: 22px 24px 15px 24px;
+        }
+        &__message-container {
+            flex: 1 0;
+            margin-right: 58px;
+            padding: 17px 30px 15px 30px;
+            border-radius: 20px;
+            background-color: #eaedf2;
+            @include breakpoint(768px) {
+                margin-right: 0;
+                padding: 17px 10px 15px 30px;
+            }
+        }
+        &__message {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: 200;
+                width: 12px;
+                height: 10px;
+                top: 2px;
+                left: -20px;
+                background: url(../../i/icons/shortcode-author-brackets.svg) no-repeat center center / contain;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 200;
+                width: 12px;
+                height: 10px;
+                top: 2px;
+                left: -20px;
+                background: url(../../i/icons/shortcode-author-brackets.svg) no-repeat center center / contain;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            a {
+                color: #e65565;
+                text-decoration: underline;
+                font-weight: 600;
+            }
+        }
+        &__brackets {
+            position: relative;
+            top: -7px;
+            width: 9px;
+            left: -5px;
+        }
+        &__tringle {
+            position: absolute;
+            z-index: 200;
+            width: 51.88px;
+            height: 43.47px;
+            top: 5px;
+            right: -65px;
+            @include breakpoint(768px) {
+                top: auto;
+                bottom: -45px;
+                right: 44%;
+                transform: rotate(-14deg);
+                width: 40px;
+            }
+        }
+        &__author-info {
+            flex: 0 0 18.2%;
+            @include breakpoint(1440px) {
+                flex: 0 0 20.9%;
+            }
+            @include breakpoint(992px) {
+                flex: 0 0 21.5%;
+            }
+            @include breakpoint(768px) {
+                flex: 1 0 100%;
+            }
+            @include breakpoint(768px) {
+                flex: 1 0 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 39px;
+            }
+        }
+        &__picture {
+            box-sizing: border-box;
+            overflow: hidden;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 0;
+            border-radius: 50%;
+            border: 2px solid #e65565;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__name {
+            margin-top: 13px;
+            p {
+                margin-bottom: 0;
+                font-weight: 600;
+            }
+        }
+        &__account-type {
+            margin-top: 11px;
+        }
+        &__social-links {
+            display: flex;
+            margin-top: 12px !important;
+            margin-bottom: 0 !important;
+            li {
+                margin-bottom: 0 !important;
+                margin-right: 8px;
+                &::before {
+                    display: none !important;
+                }
+            }
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    .author-comment-simple {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        padding: 19px 24px 3px 20px;
+        border-radius: 20px;
+        border: 1px solid #e65565;
+        &__icon {
+            flex: 0 0 32px;
+            height: 32px;
+            margin-right: 17px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__container {
+        }
+        &__message {
+            margin-bottom: 18px;
+            margin-top: 5px;
+            @include text;
+            &--comment-1 {
+                font-weight: 600;
+            }
+            p {
+                @include text;
+            }
+        }
+        &__link {
+            display: block;
+            margin-bottom: 18px;
+        }
+    }
+}

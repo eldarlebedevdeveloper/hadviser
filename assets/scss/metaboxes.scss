@@ -1,0 +1,187 @@
+@import "base";
+// Admin panel
+#meta-box-add-artists-to-article {
+    .metabox-artist_item {
+        width: 32%;
+        display: inline-block;
+    }
+}
+/* Common classes */
+.authors-post {
+    margin-bottom: 25px;
+    line-height: 28px;
+    margin-top: -5px;
+    font-size: 15px;
+}
+.author-trigger__wrapper {
+    position: relative;
+    display: inline-block;
+}
+.author-click-link {
+    cursor: pointer;
+}
+.author-click-link:hover {
+    color: #5670cc;
+}
+.authors-post .author-information {
+    margin-bottom: 0;
+}
+.author-popup .pinterest-container {
+    display: none;
+}
+.author-popup {
+    position: absolute;
+    z-index: 100;
+    box-sizing: border-box;
+    width: 496px;
+    top: 32px;
+    left: -23px;
+    padding: 18px;
+    border: 1px solid #5670cc;
+    background: #ffffff;
+}
+.author-popup--right {
+    left: auto;
+    right: -5px;
+}
+.author-popup::before {
+    content: "";
+    width: 20px;
+    height: 7px;
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 40px;
+    background: url(../../i/icons/author_popup-triangle.png) no-repeat;
+    background-size: contain;
+    z-index: 200;
+}
+.author-popup--right::before {
+    left: auto;
+    right: 40px;
+}
+.author-popup__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.author-popup__avatar {
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #5670cc;
+    border-radius: 50%;
+}
+.author-popup .author-popup__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.author-popup__close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background: #eaedf2;
+    cursor: pointer;
+}
+.authors-post .author-popup__close img {
+    width: 14px;
+    height: 14px;
+}
+.author-popup .author-popup__name {
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+.authors-post .author-popup__description {
+    margin-bottom: 8px;
+    line-height: 24px;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.authors-post .author-popup__readbio {
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #d9d9d9;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+.authors-post .authors-post__date {
+    font-weight: 500;
+}
+.author-popup__editorial {
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+.artist-trigger__wrapper .artist-click-container::after {
+    content: ", ";
+    float: right;
+    color: black;
+}
+.artist-trigger__wrapper:nth-child(2) .artist-click-container::before {
+    content: " with ";
+    float: none;
+    color: black;
+}
+.artist-trigger__wrapper:nth-child(2) .author-popup {
+    left: 15px;
+}
+.artist-trigger__wrapper:nth-last-child(3) .artist-click-container::after {
+    content: " and ";
+    float: none;
+    color: black;
+}
+.artist-trigger__wrapper:nth-last-child(2) .artist-click-container::after {
+    content: "";
+}
+
+@media screen and (max-width: 850px) {
+    .author-popup {
+        width: 396px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .authors-post {
+        overflow-x: clip;
+    }
+    .author-popup {
+        width: 260px;
+        padding: 20px 10px;
+        left: 0;
+    }
+    .author-popup--right {
+        left: auto;
+        right: 0;
+    }
+    .author-popup__close {
+        top: 10px;
+        right: 10px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .author-popup {
+        width: 235px;
+        padding: 20px 10px;
+    }
+
+    .author-popup__close {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+// Autor comment Metaboxes

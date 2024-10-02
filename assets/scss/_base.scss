@@ -1,0 +1,52 @@
+@mixin breakpoint($point) {
+    @media (max-width: $point) {
+        @content;
+    }
+}
+@mixin breakpointmobfirst($point) {
+    @media (min-width: $point) {
+        @content;
+    }
+}
+@mixin h1 {
+    font-family: "Poppins";
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 500;
+    color: #0f0f0f;
+}
+@mixin h2 {
+    font-family: "Poppins";
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #0f0f0f;
+}
+@mixin h3 {
+    font-family: "Poppins";
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #0f0f0f;
+}
+@mixin h4 {
+    font-family: "Poppins";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #0f0f0f;
+}
+@mixin h5 {
+    font-family: "Poppins";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #0f0f0f;
+}
+@mixin text {
+    font-family: "Poppins";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #0f0f0f;
+}
